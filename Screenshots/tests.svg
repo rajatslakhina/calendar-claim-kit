@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="556" viewBox="0 0 900 556">
+<rect width="900" height="556" rx="10" fill="#0f172a"/>
+<circle cx="22" cy="20" r="6" fill="#ef4444"/><circle cx="42" cy="20" r="6" fill="#f59e0b"/><circle cx="62" cy="20" r="6" fill="#22c55e"/>
+<text x="450" y="25" fill="#94a3b8" font-family="Menlo, monospace" font-size="13" text-anchor="middle">CalendarClaimKit&#160;&#8212;&#160;quality&#160;gates</text>
+<text x="20" y="60" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">$&#160;swift&#160;build</text>
+<text x="20" y="84" fill="#86efac" font-family="Menlo, monospace" font-size="13">Build&#160;complete!&#160;0&#160;warnings,&#160;0&#160;errors</text>
+<text x="20" y="108" fill="#e2e8f0" font-family="Menlo, monospace" font-size="13"></text>
+<text x="20" y="132" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">$&#160;swift&#160;test&#160;--enable-code-coverage&#160;&#160;&#160;(5&#160;repeated&#160;runs)</text>
+<text x="20" y="156" fill="#86efac" font-family="Menlo, monospace" font-size="13">Executed&#160;35&#160;tests,&#160;with&#160;0&#160;failures&#160;(0&#160;unexpected)</text>
+<text x="20" y="180" fill="#e2e8f0" font-family="Menlo, monospace" font-size="13"></text>
+<text x="20" y="204" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">$&#160;llvm-cov&#160;report&#160;&#160;(library&#160;target,&#160;19&#160;files)</text>
+<text x="20" y="228" fill="#86efac" font-family="Menlo, monospace" font-size="13">TOTAL&#160;&#160;&#160;regions&#160;959&#160;&#160;100.00%&#160;&#160;&#160;functions&#160;259&#160;&#160;100.00%&#160;&#160;&#160;lines&#160;1415&#160;&#160;100.00%</text>
+<text x="20" y="252" fill="#e2e8f0" font-family="Menlo, monospace" font-size="13"></text>
+<text x="20" y="276" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">$&#160;swiftlint&#160;lint&#160;--strict</text>
+<text x="20" y="300" fill="#86efac" font-family="Menlo, monospace" font-size="13">Done&#160;linting!&#160;Found&#160;0&#160;violations,&#160;0&#160;serious&#160;in&#160;23&#160;files.</text>
+<text x="20" y="324" fill="#e2e8f0" font-family="Menlo, monospace" font-size="13"></text>
+<text x="20" y="348" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">Mutation&#160;checks&#160;(each&#160;rule&#160;broken&#160;on&#160;purpose&#160;in&#160;a&#160;/tmp&#160;copy)</text>
+<text x="20" y="372" fill="#fca5a5" font-family="Menlo, monospace" font-size="13">counting&#160;both&#160;ends&#160;accepted&#160;as&#160;exact&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-&#62;&#160;8&#160;assertions&#160;fail</text>
+<text x="20" y="396" fill="#fca5a5" font-family="Menlo, monospace" font-size="13">worked&#160;answer&#160;bound&#160;to&#160;its&#160;first&#160;step&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-&#62;&#160;1&#160;assertion&#160;fails</text>
+<text x="20" y="420" fill="#fca5a5" font-family="Menlo, monospace" font-size="13">no&#160;&#34;last&#160;value&#160;after&#160;is/lands&#160;on&#34;&#160;rule&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-&#62;&#160;1&#160;assertion&#160;fails</text>
+<text x="20" y="444" fill="#fca5a5" font-family="Menlo, monospace" font-size="13">a&#160;guessed&#160;year&#160;can&#160;make&#160;February&#160;29&#160;impossible&#160;-&#62;&#160;2&#160;assertions&#160;fail</text>
+<text x="20" y="468" fill="#e2e8f0" font-family="Menlo, monospace" font-size="13"></text>
+<text x="20" y="492" fill="#7dd3fc" font-family="Menlo, monospace" font-size="13">$&#160;swift&#160;run&#160;CalendarClaimDemo</text>
+<text x="20" y="516" fill="#86efac" font-family="Menlo, monospace" font-size="13">8&#160;scenarios,&#160;147&#160;lines,&#160;identical&#160;on&#160;every&#160;run&#160;(fixed&#160;clock:&#160;October&#160;27,&#160;2026&#160;UTC)</text>
+</svg>

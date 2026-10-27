@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600">
+<rect width="1100" height="600" rx="12" fill="#0f172a"/>
+<defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#94a3b8"/></marker></defs>
+<text x="550" y="36" fill="#e2e8f0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">CalendarClaimKit</text>
+<text x="550" y="60" fill="#94a3b8" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">the&#160;calendar&#160;arithmetic&#160;in&#160;an&#160;answer,&#160;recomputed&#160;instead&#160;of&#160;trusted</text>
+<rect x="30" y="90" width="230" height="96" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="145.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ProviderGatewayKit</text>
+<text x="145.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">sends&#160;the&#160;turn</text>
+<text x="145.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">returns&#160;the&#160;answer&#160;text</text>
+<rect x="30" y="220" width="230" height="96" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+<text x="145.0" y="244" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">question&#160;+&#160;answer</text>
+<text x="145.0" y="266" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;What&#160;date&#160;is&#160;90&#160;days&#160;after</text>
+<text x="145.0" y="284" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">March&#160;3,&#160;2026?&#34;&#160;/&#160;&#34;June&#160;2&#34;</text>
+<rect x="320" y="90" width="230" height="130" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="435.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Tokenizer&#160;+&#160;PieceScanner</text>
+<text x="435.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;Tue,&#160;17&#160;Mar&#160;2026&#34;&#160;=&#160;one&#160;date</text>
+<text x="435.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">numbers,&#160;units,&#160;ordinals,</text>
+<text x="435.0" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;today&#34;,&#160;&#34;next&#160;Friday&#34;</text>
+<text x="435.0" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;May&#34;&#160;only&#160;when&#160;capitalised</text>
+<rect x="320" y="250" width="230" height="130" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="435.0" y="274" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">PieceReader</text>
+<text x="435.0" y="296" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">a&#160;year&#160;for&#160;every&#160;date:</text>
+<text x="435.0" y="314" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">same&#160;sentence&#160;&#8594;&#160;text&#160;&#8594;</text>
+<text x="435.0" y="332" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">conversation&#160;&#8594;&#160;today</text>
+<text x="435.0" y="350" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">(the&#160;source&#160;is&#160;kept)</text>
+<rect x="610" y="90" width="220" height="130" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="720.0" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ClaimReader</text>
+<text x="720.0" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">answer&#160;states&#160;both&#160;sides:</text>
+<text x="720.0" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">weekday,&#160;offset,&#160;span,</text>
+<text x="720.0" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">nth&#160;weekday,&#160;leap&#160;year,</text>
+<text x="720.0" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">month&#160;length,&#160;today</text>
+<rect x="610" y="250" width="220" height="130" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="720.0" y="274" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">QuestionReader</text>
+<text x="720.0" y="296" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">question&#160;asks,&#160;answer&#160;gives:</text>
+<text x="720.0" y="314" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;What&#160;day&#160;was&#160;July&#160;4,&#160;1976?&#34;</text>
+<text x="720.0" y="332" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">&#34;A&#160;Sunday.&#34;&#160;&#8594;&#160;one&#160;claim</text>
+<text x="720.0" y="350" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">worked&#160;answers:&#160;last&#160;result</text>
+<rect x="880" y="90" width="195" height="170" rx="8" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+<text x="977.5" y="114" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">CalendarEvaluator</text>
+<text x="977.5" y="136" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">CivilDate&#160;day&#160;counts</text>
+<text x="977.5" y="154" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">(no&#160;Calendar,&#160;no&#160;DST)</text>
+<text x="977.5" y="172" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">BusinessCalendar</text>
+<text x="977.5" y="190" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">weekend&#160;+&#160;holidays</text>
+<text x="977.5" y="208" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">months&#160;clamp:&#160;Mar&#160;31</text>
+<text x="977.5" y="226" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">+&#160;1&#160;month&#160;=&#160;Apr&#160;30</text>
+<rect x="880" y="300" width="195" height="150" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="977.5" y="324" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">CalendarReport</text>
+<text x="977.5" y="346" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">verified&#160;/&#160;contradicted&#160;/</text>
+<text x="977.5" y="364" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">impossible&#160;date&#160;/</text>
+<text x="977.5" y="382" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">depends&#160;on&#160;convention&#160;/</text>
+<text x="977.5" y="400" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">unresolved</text>
+<text x="977.5" y="418" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">note&#160;&#183;&#160;feedback</text>
+<rect x="320" y="420" width="510" height="120" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="575.0" y="444" fill="#f8fafc" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">CalendarSession&#160;(actor)</text>
+<text x="575.0" y="466" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">carries&#160;the&#160;year&#160;a&#160;conversation&#160;set&#160;(&#34;the&#160;2027&#160;offsite&#34;)&#160;into&#160;later&#160;turns</text>
+<text x="575.0" y="484" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">totals:&#160;checks,&#160;verified,&#160;contradicted,&#160;impossible,&#160;convention,&#160;unresolved</text>
+<text x="575.0" y="502" fill="#cbd5e1" font-family="Helvetica, Arial, sans-serif" font-size="12.5" text-anchor="middle">a&#160;guessed&#160;year&#160;that&#160;fails&#160;is&#160;retried&#160;as&#160;next&#160;and&#160;last&#160;year&#160;&#8594;&#160;&#34;depends&#160;on&#160;convention&#34;</text>
+<line x1="145" y1="186" x2="145" y2="220" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="260" y1="268" x2="320" y2="180" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="435" y1="220" x2="435" y2="250" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="550" y1="300" x2="610" y2="160" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="550" y1="320" x2="610" y2="320" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="830" y1="155" x2="880" y2="170" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="830" y1="320" x2="880" y2="250" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="977" y1="260" x2="977" y2="300" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="880" y1="420" x2="830" y2="470" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="550" y="580" fill="#64748b" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">Swift&#160;6&#160;&#183;&#160;actor-isolated&#160;session&#160;&#183;&#160;Sendable&#160;value&#160;types&#160;&#183;&#160;no&#160;dependencies&#160;&#183;&#160;part&#160;of&#160;the&#160;ProviderGatewayKit&#160;ecosystem</text>
+</svg>
