@@ -112,12 +112,14 @@ struct ClauseView {
         return previous.flatMap { Lexicon.qualifiers[$0] } ?? .exact
     }
 
-    /// The value on the far side of a copula after `end` ("... is June 1", "... later on June 1"), or
-    /// the value whose copula ends exactly at `start` ("June 1 is ..."), with the negation either way.
+    /// The value on the far side of a copula after `end` ("... is June 1", "... later on June 1"), the
+    /// value set off by a comma before `start` ("June 1, 90 days after March 3"), or the value whose
+    /// copula ends exactly at `start` ("June 1 is ..."), with the negation either way.
     func dayValue(around start: Int, end: Int) -> (CalendarValue, Bool)? {
         let after = isMark(end, ",") ? end + 1 : end
         if let (next, negated) = copula(at: after), let value = dayValue(at: next) { return (value, negated) }
         if word(after) == "on", let value = dayValue(at: after + 1) { return (value, false) }
+        if isMark(start - 1, ","), let value = dayValue(at: start - 2) { return (value, false) }
         for subject in stride(from: start - 1, through: max(0, start - 3), by: -1) {
             if let value = dayValue(at: subject), let (next, negated) = copula(at: subject + 1), next == start {
                 return (value, negated)

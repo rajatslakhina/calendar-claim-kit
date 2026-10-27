@@ -39,6 +39,19 @@ final class CheckerTests: XCTestCase {
         XCTAssertEqual(check("Sunny.", question: "Will it rain?").checks, [])
     }
 
+    func testTheQuestionGivesTheBaseAndTheYear() {
+        let question = "My 90-day trial started on March 3, 2026. When does it end, and what weekday is that?"
+        let first = check("Your trial ends 90 days later, on June 2, 2026, a Tuesday.", question: question)
+        XCTAssertEqual(first.checks.map(\.statement), [
+            "90 days after March 3, 2026 is June 2, 2026", "June 2, 2026 is a Tuesday"
+        ])
+        XCTAssertEqual(statuses(first), [.contradicted, .verified])
+        let second = check("Your trial ends on Monday, June 1, 2026, 90 days after March 3.", question: question)
+        XCTAssertEqual(statuses(second), [.verified, .verified])
+        XCTAssertEqual(second.checks.last?.statement, "90 days after March 3, 2026 is June 1, 2026")
+        XCTAssertNil(QuestionReader().operation(in: read(question, today: 2026)))
+    }
+
     func testNoteAndFeedback() {
         let report = check("March 17, 2026 is a Monday. July 4, 1976 was not a Sunday. From March 3 to June 1, 2026 is 91 days.")
         XCTAssertEqual(report.corrections, [

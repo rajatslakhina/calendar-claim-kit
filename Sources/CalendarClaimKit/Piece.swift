@@ -51,4 +51,9 @@ struct TextReading: Sendable, Hashable {
     let statedYears: [Int]
 
     var pieces: [Piece] { clauses.flatMap(\.pieces) }
+
+    /// The last date the text names.
+    var lastDate: DateMention? {
+        ClauseView(pieces: pieces).lastDate(before: pieces.count)
+    }
 }

@@ -102,6 +102,8 @@ Without a session: `CalendarChecker().check(answer:question:now:contextYear:)`.
   the question, an earlier turn, and only then today's year. A claim that fails with today's year and
   holds for next or last year is *depends on convention*: "March 17 is a Wednesday" is true for 2027.
   Without a clock, a date with no year is *unresolved*, not guessed.
+- **"90 days later" counts from the last date before it**: in the same sentence, an earlier sentence,
+  or the question the answer replies to.
 - **A guessed year never makes a date impossible.** "February 29" with no year exists in some years.
 - **A question's answer is bound carefully.** One value, however often repeated, is the answer. Otherwise
   the last value after "is", "it's", "lands on" or "=" is the result of a worked answer. Otherwise a first
@@ -160,18 +162,27 @@ All run on this machine (Swift 6.4, SwiftLint 0.63.2), and again on a fresh clon
 after it was pushed:
 
 - `swift build`: 0 warnings, 0 errors.
-- `swift test --enable-code-coverage`: 35 tests, 0 failures, green on 5 repeated runs.
-- `llvm-cov report`: **100.00%** regions (959), functions (259) and lines (1415) on all 19 library files
+- `swift test --enable-code-coverage`: 36 tests, 0 failures, green on 5 repeated runs.
+- `llvm-cov report`: **100.00%** regions (963), functions (260) and lines (1419) on all 19 library files
   ([`Screenshots/coverage.txt`](Screenshots/coverage.txt)).
 - `swiftlint lint --strict`: 0 violations in 23 files, no suppressions.
-- Four rules were mutation-checked in a copy: accepting a both-ends count as exact fails 8 assertions;
+- Five rules were mutation-checked in a copy: accepting a both-ends count as exact fails 8 assertions;
   binding a worked answer to its first step fails 1; dropping the "last value after *is*" rule fails 1;
-  letting a guessed year make February 29 impossible fails 2.
+  letting a guessed year make February 29 impossible fails 2; not counting "90 days later" from the
+  question's date fails 2.
 
 The demo was the first real use, and it found two gaps, each fixed and pinned by a test: a one-sentence
 worked answer ("28 days to March 31, ... and 1 more lands on June 1") was bound to its first
 intermediate date, and "it ends 90 days later on June 2, a Tuesday" was not read at all. A test then
 found a third: "90 days later" in a sentence of its own could not see the date in the sentence before.
+
+The [ecosystem demo](https://github.com/rajatslakhina/llm-ecosystem-demo) (scenario 95) found three
+more in 1.0.0, fixed in 1.0.1 and pinned by a test. The worst: "Your trial ends 90 days later, on June 2,
+2026, a Tuesday", answering "My 90-day trial started on March 3, 2026. When does it end?", came back
+*verified*, because the date "90 days later" counts from was in the question and only the (correct)
+weekday was checked. The question's last date is now the base for "later" and "earlier" in the answer.
+The same question was misread as "what day is it today" because it contains "it", and "June 1, 2026,
+90 days after March 3" (the value set off by a comma) was not read.
 
 ![gates](Screenshots/tests.svg)
 
@@ -187,7 +198,7 @@ found a third: "90 days later" in a sentence of its own could not see the date i
 - **Ages and durations in prose** ("she turns 36 in March") are not read.
 - **Binding an answer to a question is a heuristic.** A worked answer whose last "is" value is a side
   remark is checked on that remark; an answer with several candidate dates and no "is" is not checked.
-- **The tests are home-made.** 35 tests written alongside the code show the rules do what they say, not
+- **The tests are home-made.** 36 tests written alongside the code show the rules do what they say, not
   how often real answers fall outside them.
 
 ## License

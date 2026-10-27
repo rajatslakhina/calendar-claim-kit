@@ -13,9 +13,11 @@ struct ClaimReader: Sendable {
         }
     }
 
-    func claims(in reading: TextReading) -> [CalendarClaim] {
+    /// - Parameter priorDate: the last date named before this text (in the question it answers), which
+    ///   "90 days later" in the text's first sentence counts from when that sentence names none.
+    func claims(in reading: TextReading, priorDate initial: DateMention? = nil) -> [CalendarClaim] {
         var claims: [CalendarClaim] = []
-        var priorDate: DateMention?
+        var priorDate = initial
         for clause in reading.clauses {
             for claim in self.claims(in: clause, priorDate: priorDate) where !claims.contains(claim) {
                 claims.append(claim)

@@ -72,7 +72,7 @@ public struct CalendarChecker: Sendable {
             contextYear: questionReading?.statedYears.last ?? contextYear, todayYear: todayYear
         )
         let answerReading = PieceReader(context: answerContext).read(answer)
-        var claims = ClaimReader().claims(in: answerReading)
+        var claims = ClaimReader().claims(in: answerReading, priorDate: questionReading?.lastDate)
         let reader = QuestionReader()
         if let questionReading, let operation = reader.operation(in: questionReading),
            !claims.contains(where: { $0.expression.kind == operation.expression.kind }),

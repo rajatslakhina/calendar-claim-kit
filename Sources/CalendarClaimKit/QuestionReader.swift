@@ -52,7 +52,7 @@ struct QuestionReader: Sendable {
         }
         if asksDay, let date = dates.first { return make(.weekdayOf(date), .weekday) }
         let named = clause.pieces.lazy.compactMap(Self.anchor).first
-        let anchor = named ?? (asksDay && words.contains("it") ? .today : nil)
+        let anchor = named ?? (asksDay && lower.contains("is it") ? .today : nil)
         if let anchor, asksDay || lower.contains("date") { return make(.anchor(anchor), dayExpectation) }
         return nil
     }
